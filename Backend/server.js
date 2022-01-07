@@ -3,7 +3,7 @@ var express = require('express')
 var app = express();
 
 const path = require('path');
-// const port = process.env.PORT || 3300;
+const port = process.env.PORT || 3300;
 app.use(express.static('./dist/CS5610-web-dev-project'));
 
 // require body-parser
@@ -80,6 +80,4 @@ recruiterService(app);
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname + '/dist/CS5610-web-dev-project/index.html'));
   });
-  app.listen(process.env.PORT || 5500, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+  app.listen(port,()=>{console.log("Server Ready at" +port)});

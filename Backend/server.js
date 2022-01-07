@@ -3,7 +3,7 @@ var express = require('express')
 var app = express();
 
 const path = require('path');
-const port = process.env.PORT || 3300;
+const port = process.env.PORT || 5500;
 app.use(express.static('./dist/CS5610-web-dev-project'));
 
 // require body-parser
